@@ -40,8 +40,8 @@ app.post(
     }
 
     try {
-      console.log("in here!");
-      console.log(c.req.header());
+      
+      console.log(`New request from: ${c.req.header('cf-connecting-ip')}`);
       const response = await fetch(
         `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
         {
