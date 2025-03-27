@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Illia Shust - Contact</title>
+  <meta name="description" content="Photography portfolio contact" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
@@ -15,8 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="assets/config.js"></script>
+  <script src="assets/theme.js"></script>
 </head>
 
 <body
@@ -25,7 +25,7 @@
     <nav id="nav" x-data="{ open: false }" role="navigation" class="w-full">
       <div class="container mx-auto flex flex-wrap items-center md:flex-no-wrap">
         <div class="mr-4 md:mr-8">
-          <a href="index.html" class="text-4xl font-signika font-bold">Illia Shust</a>
+          <a href="index.html" class="text-4xl font-bold">Illia Shust</a>
         </div>
         <div class="ml-auto md:hidden flex items-center justify-start">
           <button onclick="menuToggle()" @click="open = !open"
@@ -48,25 +48,25 @@
         <div id="menu"
           class="w-full h-0 transition-all ease-out duration-500 md:transition-none md:w-auto md:flex-grow md:flex md:items-center">
           <ul id="ulMenu"
-            class="flex flex-col duration-300 ease-out md:space-x-5 sm:transition-none mt-5 md:flex-row md:items-center md:ml-auto md:mt-0 md:pt-0 md:border-0">
-            <li class="group transition duration-300">
+            class="flex flex-col duration-500 ease-out md:space-x-5 sm:transition-none mt-5 md:flex-row md:items-center md:ml-auto md:mt-0 md:pt-0 md:border-0">
+            <li class="group transition duration-500">
               <a href="index.html" class="font-signika text-2xl">PORTFOLIO
                 <span
                   class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
               </a>
             </li>
-            <li class="group transition duration-300">
+            <li class="group transition duration-500">
               <a href="about.html" class="font-signika text-2xl">ABOUT ME
                 <span
                   class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
               </a>
             </li>
-            <li class="group transition duration-300">
+            <li class="group transition duration-500">
               <a href="contact.html" class="font-signika text-2xl">CONTACT
                 <span class="hidden md:block h-0.5 bg-black dark:bg-white"></span>
               </a>
             </li>
-            <li class="group transition duration-300">
+            <li class="group transition duration-500">
               <button id="theme-toggle-btn" onclick="switchTheme()"
                 class="w-8 h-8 flex items-center justify-left focus:outline-none">
                 <svg x-show="!document.documentElement.classList.contains('dark')" xmlns="http://www.w3.org/2000/svg"
@@ -74,8 +74,8 @@
                   <path
                     d="M12 3v1M12 20v1m8.485-8.485h1M3.515 12.515h1m12.728 4.243l.707.707M6.07 6.07l.707.707m12.728 0l-.707.707M6.777 17.657l-.707.707M12 5a7 7 0 100 14 7 7 0 000-14z" />
                 </svg>
-                <svg x-show="document.documentElement.classList.contains('dark')" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
-                  fill="currentColor" viewBox="0 0 24 24">
+                <svg x-show="document.documentElement.classList.contains('dark')" xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" />
                 </svg>
               </button>
@@ -89,7 +89,7 @@
     <div class="grid grid-cols-2 gap-16">
       <section class="col-span-2 md:col-span-1">
         <div class="max-w-screen-md">
-          <h1 class="text-4xl pt-10 pb-8"><b>CONTACT</b></h1>
+          <h1 class="text-2xl pt-10 pb-8"><b>CONTACT</b></h1>
 
           <form class="space-y-8" id="contact-form" method="POST">
             <div>
@@ -104,7 +104,7 @@
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
               <input type="text" id="subject" name="subject"
                 class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-900 dark:border-neutral-800 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                placeholder="Let me know how I can help you" required minlength="4" maxlength="40"/>
+                placeholder="Let me know how I can help you" required minlength="4" maxlength="40" />
             </div>
             <div class="sm:col-span-2">
               <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your
@@ -138,7 +138,7 @@
           <div class="flex mx-auto">
             <div class="mx-auto space-x-6 flex mt-8 text-gray-600 dark:text-gray-300">
 
-              <a class="transition duration-300 hover:opacity-75" href="https://www.instagram.com/easyusernamess"
+              <a class="transition duration-500 hover:opacity-75" href="https://www.instagram.com/easyusernamess"
                 target="_blank" rel="noreferrer">
                 <span class="sr-only"> Instagram </span>
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -147,7 +147,7 @@
                     clipRule="evenodd" />
                 </svg>
               </a>
-              <a class="transition duration-300 hover:opacity-75" href="https://github.com/awerks" target="_blank"
+              <a class="transition duration-500 hover:opacity-75" href="https://github.com/awerks" target="_blank"
                 rel="noreferrer">
                 <span class="sr-only"> Github </span>
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -166,9 +166,8 @@
       </p>
     </div>
   </footer>
-  <script src="assets/fade_in.js"></script>
+  <script src="assets/fade.js"></script>
   <script src="assets/menu.js"></script>
-  <script src="assets/theme.js"></script>
   <script src="assets/contact.js"></script>
 </body>
 
