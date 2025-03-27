@@ -4,10 +4,23 @@ import os
 from pathlib import Path
 
 
-def convert_jpg_to_webp(input_path: Path, output_path: Path):
+def convert_jpg_to_webp(input_path: Path, output_path: Path, quality: int = 95):
 
     try:
-        subprocess.run(["magick", str(input_path),  "-quality", "95", "-define","webp:lossless=false", "-define","webp:method=6", str(output_path)], check=True)
+        subprocess.run(
+            [
+                "magick",
+                str(input_path),
+                "-quality",
+                str(quality),
+                "-define",
+                "webp:lossless=false",
+                "-define",
+                "webp:method=6",
+                str(output_path),
+            ],
+            check=True,
+        )
         print(f"Converted {input_path} to {output_path}")
     except subprocess.CalledProcessError as e:
         print(f"Error converting {input_path} to {output_path}: {e}")
@@ -17,7 +30,7 @@ def convert_jpg_to_webp(input_path: Path, output_path: Path):
         print(f"An unexpected error occurred: {e}")
 
 
-def convert_all_jpgs(input_dir: Path, output_dir: Path):
+def convert_all_jpgs(input_dir: Path, output_dir: Path, double_iteration: bool = False):
 
     if not input_dir.exists() or not input_dir.is_dir():
         print(f"Input directory '{input_dir}' does not exist or is not a directory.")
@@ -27,16 +40,26 @@ def convert_all_jpgs(input_dir: Path, output_dir: Path):
     counter = 0
     for file in os.listdir(input_dir):
         if file.lower().endswith(".jpg") or file.lower().endswith(".jpeg"):
-            counter +=1
+            counter += 1
             input_path = Path(input_dir) / file
             output_path = output_dir / f"{counter}.webp"
-            convert_jpg_to_webp(input_path, output_path)
         else:
             print(f"Skipping non-JPG file: {file}")
+
+    if double_iteration:
+        print("Performing double iteration...")
+        for file in os.listdir(output_dir):
+            if file.lower().endswith(".webp") and os.stat(output_dir / file).st_size > 1024 * 300:  # 300 KB
+                output_path = output_dir / file
+                print(f"Converting {output_path} to webp with quality 80...")
+                convert_jpg_to_webp(output_path, output_path, quality=80)
+            else:
+                print(f"Skipping file: {file}")
 
 
 if __name__ == "__main__":
     input_dir = Path("jpg_files")
     output_dir = Path("site/assets/img/pictures")
+    double_iteration = True
 
-    convert_all_jpgs(input_dir, output_dir)
+    convert_all_jpgs(input_dir, output_dir, double_iteration)

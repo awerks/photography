@@ -1,16 +1,17 @@
 # About The Project
 
-This project is a web-based portfolio that showcases my photography work. The portfolio was built using a combination of powerful front-end technologies, including Tailwind, CSS, HTML, and JavaScript.
+This project is a web-based portfolio that showcases my photography work.
 
 ## Built With
 
 - HTML
 - CSS
-- JavaScript (JQuery)
+- JavaScript
 - Tailwind
 
 ## Third party
 
 - [FancyBox](https://fancyapps.com/fancybox/)
-- [Unsplash](https://unsplash.com/)
-- [Tailwind Documentation](https://tailwindcss.com/docs/installation)
+- [Tailwind](https://tailwindcss.com/docs/installation)
+- [JQuery](https://jquery.com/)
+- [Google Fonts](https://fonts.google.com/)
