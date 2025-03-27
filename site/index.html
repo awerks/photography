@@ -18,9 +18,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
 
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+  <script defer src="https://code.jquery.com/jquery-3.6.3.min.js"
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 
   <script src="assets/theme.js"></script>
@@ -74,7 +74,7 @@
               </a>
             </li>
             <li class="group transition duration-500">
-              <button id="theme-toggle-btn" onclick="switchTheme()"
+              <button id="theme-toggle-btn" onclick="switchTheme()" aria-label="Toggle dark mode"
                 class="w-8 h-8 flex items-center justify-left focus:outline-none cursor-pointer">
                 <svg x-show="!document.documentElement.classList.contains('dark')" xmlns="http://www.w3.org/2000/svg"
                   class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -101,7 +101,7 @@
               <div class="w-full md:w-1/2 p-1">
                 <div class="overflow-hidden h-full w-full">
                   <a href="assets/img/pictures/1.webp" data-fancybox="gallery">
-                    <img loading="lazy" loading="lazy" alt="image 1"
+                    <img loading="lazy" alt="image 1"
                       class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
                       src="assets/img/pictures/1.webp" />
                   </a>
@@ -403,7 +403,9 @@
     </div>
   </footer>
   <script>
-    Fancybox.bind("[data-fancybox]", {});
+    document.addEventListener('DOMContentLoaded', function () {
+      Fancybox.bind("[data-fancybox]", {});
+    });
   </script>
   <script src="assets/fade.js"></script>
   <script src="assets/menu.js"></script>

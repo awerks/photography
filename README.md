@@ -2,7 +2,7 @@
 
 This project is a web-based portfolio that showcases my photography work. The portfolio was built using a combination of powerful front-end technologies, including Tailwind, CSS, HTML, and JavaScript.
 
-## Built With 
+## Built With
 
 - HTML
 - CSS
