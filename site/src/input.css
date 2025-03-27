@@ -11,6 +11,8 @@
 
 @theme {
   --font-signika: Signika, sans-serif;
+  --breakpoint-md: 50rem;
+
 }
 
 @layer utilities {
