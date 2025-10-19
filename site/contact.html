@@ -7,73 +7,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Illia Shust - Contact</title>
   <meta name="description" content="Photography portfolio contact" />
+  <meta name="robots" content="noindex, nofollow" />
+
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
   <link rel="manifest" href="assets/img/favicon/site.webmanifest">
   <link rel="stylesheet" href="assets/output.css" />
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
   <script src="assets/theme.js"></script>
+
 </head>
 
 <body
-  class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
-  <header class="flex w-full overflow-hidden pt-10 pb-1">
-    <nav id="nav" x-data="{ open: false }" role="navigation" class="w-full">
-      <div class="container mx-auto flex flex-wrap items-center md:flex-no-wrap">
+  class="bg-white dark:bg-black opacity-0 px-5 md:px-20 h-screen text-black dark:text-white transition animate-fade-in duration-500">
+  <header class="flex pt-10 pb-1 w-full overflow-hidden">
+    <nav id="nav" role="navigation" class="w-full">
+      <div class="flex flex-wrap md:flex-no-wrap items-center mx-auto container">
         <div class="mr-4 md:mr-8">
-          <a href="index.html" class="text-4xl font-bold">Illia Shust</a>
+          <a href="index.html" class="font-bold text-4xl">Illia Shust</a>
         </div>
-        <div class="ml-auto md:hidden flex items-center justify-start">
-          <button onclick="menuToggle()" @click="open = !open"
-            class="tap-highlight-transparent text-black dark:text-white w-5 h-5 relative focus:outline-none"
-            @click="open = !open">
-            <span class="sr-only">Open main menu</span>
-            <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <span aria-hidden="true"
-                class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
-                :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
-              <span aria-hidden="true"
-                class="block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out"
-                :class="{'opacity-0': open } "></span>
-              <span aria-hidden="true"
-                class="block absolute  h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out"
-                :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
-            </div>
-          </button>
+        <div class="md:hidden flex justify-start items-center ml-auto">
+          <button onclick="menuToggle()"
+          class="relative focus:outline-none w-5 h-5 text-black dark:text-white tap-highlight-transparent">
+          <span class="sr-only">Open main menu</span>
+          <div class="block top-1/2 left-1/2 absolute w-5 -translate-x-1/2 -translate-y-1/2 transform">
+            <span aria-hidden="true"
+              class="block absolute bg-current w-5 h-0.5 transition -translate-y-1.5 duration-500 ease-in-out transform"
+              id="menu-line-1"></span>
+            <span aria-hidden="true"
+              class="block absolute bg-current w-5 h-0.5 transition duration-500 ease-in-out transform"
+              id="menu-line-2"></span>
+            <span aria-hidden="true"
+              class="block absolute bg-current w-5 h-0.5 transition translate-y-1.5 duration-500 ease-in-out transform"
+              id="menu-line-3"></span>
+          </div>
+        </button>
         </div>
         <div id="menu"
-          class="w-full h-0 transition-all ease-out duration-500 md:transition-none md:w-auto md:flex-grow md:flex md:items-center">
+          class="md:flex md:flex-grow md:items-center w-full md:w-auto h-0 transition-all md:transition-none duration-500 ease-out">
           <ul id="ulMenu"
-            class="flex flex-col duration-500 ease-out md:space-x-5 sm:transition-none md:flex-row md:items-center md:ml-auto md:mt-0 md:pt-0 md:border-0 max-md:space-y-4 max-md:mt-10 ">
-            <li class="group max-md:transition-none transition duration-500">
+            class="flex md:flex-row flex-col md:items-center md:space-x-5 max-md:space-y-4 max-md:mt-10 md:mt-0 md:ml-auto md:pt-0 md:border-0 sm:transition-none duration-500 ease-out">
+            <li class="group transition max-md:transition-none duration-500">
               <a href="index.html" class="font-signika text-2xl">PORTFOLIO
                 <span
-                  class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                  class="hidden md:block bg-black dark:bg-white max-w-0 group-hover:max-w-full h-0.5 transition-all duration-500"></span>
               </a>
             </li>
-            <li class="group max-md:transition-none transition duration-500">
+            <li class="group transition max-md:transition-none duration-500">
               <a href="about.html" class="font-signika text-2xl">ABOUT ME
                 <span
-                  class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                  class="hidden md:block bg-black dark:bg-white max-w-0 group-hover:max-w-full h-0.5 transition-all duration-500"></span>
               </a>
             </li>
-            <li class="group max-md:transition-none transition duration-500">
+            <li class="group transition max-md:transition-none duration-500">
               <a href="contact.html" class="font-signika text-2xl">CONTACT
-                <span class="hidden md:block h-0.5 bg-black dark:bg-white"></span>
+                <span class="hidden md:block bg-black dark:bg-white h-0.5"></span>
               </a>
             </li>
-            <li class="group max-md:transition-none transition duration-500">
+            <li class="group transition max-md:transition-none duration-500">
               <button id="theme-toggle-btn" onclick="switchTheme()"
-                class="w-8 h-8 flex items-center justify-left focus:outline-none cursor-pointer">
-                <svg x-show="!document.documentElement.classList.contains('dark')" xmlns="http://www.w3.org/2000/svg"
-                  class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" />
-                </svg>
-                <svg x-show="document.documentElement.classList.contains('dark')" xmlns="http://www.w3.org/2000/svg"
+                class="flex justify-left items-center focus:outline-none w-8 h-8 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg"
                   class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" />
                 </svg>
@@ -84,60 +81,60 @@
       </div>
     </nav>
   </header>
-  <div class="container mx-auto ">
-    <div class="grid grid-cols-2 gap-16">
+  <div class="mx-auto container">
+    <div class="gap-16 grid grid-cols-2">
       <section class="col-span-2 md:col-span-1">
         <div class="max-w-screen-md">
-          <h1 class="text-2xl pt-10 pb-8"><b>CONTACT</b></h1>
+          <h1 class="pt-10 pb-8 text-2xl"><b>CONTACT</b></h1>
 
           <form class="space-y-8" id="contact-form" method="POST">
             <div>
-              <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your
+              <label for="email" class="block mb-2 font-medium text-gray-900 dark:text-gray-300 text-sm">Your
                 email</label>
               <input type="email" id="email" name="email"
-                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-neutral-900 dark:border-neutral-800 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light transition duration-500"
+                class="block bg-gray-50 dark:bg-neutral-900 shadow-sm dark:shadow-sm-light p-2.5 border border-gray-300 focus:border-primary-500 dark:border-neutral-800 dark:focus:border-primary-500 rounded-lg focus:ring-primary-500 dark:focus:ring-primary-500 w-full text-gray-900 dark:text-white text-sm transition duration-500 dark:placeholder-gray-400"
                 placeholder="example@gmail.com" required />
             </div>
             <div>
               <label for="subject"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
+                class="block mb-2 font-medium text-gray-900 dark:text-gray-300 text-sm">Subject</label>
               <input type="text" id="subject" name="subject"
-                class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-900 dark:border-neutral-800 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light transition duration-500"
+                class="block bg-gray-50 dark:bg-neutral-900 shadow-sm dark:shadow-sm-light p-3 border border-gray-300 focus:border-primary-500 dark:border-neutral-800 dark:focus:border-primary-500 rounded-lg focus:ring-primary-500 dark:focus:ring-primary-500 w-full text-gray-900 dark:text-white text-sm transition duration-500 dark:placeholder-gray-400"
                 placeholder="Let me know how I can help you" required minlength="4" maxlength="40" />
             </div>
             <div class="sm:col-span-2">
-              <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your
+              <label for="message" class="block mb-2 font-medium text-gray-900 dark:text-gray-400 text-sm">Your
                 message</label>
               <textarea id="message" rows="6" name="message"
-                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-900 dark:border-neutral-800 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 transition duration-500"
+                class="block bg-gray-50 dark:bg-neutral-900 shadow-sm p-2.5 border border-gray-300 focus:border-primary-500 dark:border-neutral-800 dark:focus:border-primary-500 rounded-lg focus:ring-primary-500 dark:focus:ring-primary-500 w-full text-gray-900 dark:text-white text-sm transition duration-500 dark:placeholder-gray-400"
                 placeholder="Leave a comment..." required minlength="4" maxlength="300"></textarea>
             </div>
             <p id="contact-feedback-message"></p>
             <button type="submit"
-              class="py-3 px-5 text-sm font-medium text-center bg-black dark:bg-white text-white dark:text-black rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 disabled:opacity-50 disabled:cursor-not-allowed disabled:bg-gray-400 transition duration-500">
+              class="bg-black bg-primary-700 hover:bg-primary-800 disabled:bg-gray-400 dark:bg-primary-600 dark:bg-white dark:hover:bg-primary-700 disabled:opacity-50 px-5 py-3 rounded-lg focus:outline-none focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-800 sm:w-fit font-medium text-white dark:text-black text-sm text-center transition duration-500 disabled:cursor-not-allowed">
               Send message
             </button>
           </form>
         </div>
       </section>
-      <div class="col-span-2 md:col-span-1 flex relative">
+      <div class="relative flex col-span-2 md:col-span-1">
         <div
-          class="bg-white dark:bg-neutral-900 p-5 pb-20 m-6 md:m-12 shadow-lg border border-gray-100 dark:border-neutral-800  hover:rotate-0 transition duration-500 rotate-6 relative">
+          class="relative bg-white dark:bg-neutral-900 shadow-lg m-6 md:m-12 p-5 pb-20 border border-gray-100 dark:border-neutral-800 rotate-6 hover:rotate-0 transition duration-500">
           <img loading="lazy" src="assets/img/contact.webp" alt="Protest picture"
-            class="flex flex-col aspect-square w-full object-cover h-auto max-h-full" />
+            class="flex flex-col w-full h-auto max-h-full object-cover aspect-square" />
         </div>
       </div>
     </div>
   </div>
   <footer>
-    <div class="max-w-screen-xl py-16 mx-auto">
-      <div class="grid grid-cols-1 gap-8 text-center mx-auto">
+    <div class="mx-auto py-16 max-w-screen-xl">
+      <div class="gap-8 grid grid-cols-1 mx-auto text-center">
         <div>
 
           <div class="flex mx-auto">
-            <div class="mx-auto space-x-6 flex mt-8 text-gray-600 dark:text-gray-300">
+            <div class="flex space-x-6 mx-auto mt-8 text-gray-600 dark:text-gray-300">
 
-              <a class="transition duration-500 hover:opacity-75" href="https://www.instagram.com/easyusernamess"
+              <a class="hover:opacity-75 transition duration-500" href="https://www.instagram.com/easyusernamess"
                 target="_blank" rel="noreferrer">
                 <span class="sr-only"> Instagram </span>
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -146,7 +143,7 @@
                     clipRule="evenodd" />
                 </svg>
               </a>
-              <a class="transition duration-500 hover:opacity-75" href="https://github.com/awerks" target="_blank"
+              <a class="hover:opacity-75 transition duration-500" href="https://github.com/awerks" target="_blank"
                 rel="noreferrer">
                 <span class="sr-only"> Github </span>
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -159,7 +156,7 @@
           </div>
         </div>
       </div>
-      <p class="mt-8 text-xs text-gray-600 dark:text-gray-300 text-center">
+      <p class="mt-8 text-gray-600 dark:text-gray-300 text-xs text-center">
         © 2025 Developed by
         <a href="https://github.com/awerks" class="underline" target="_blank">Illia Shust</a>
       </p>

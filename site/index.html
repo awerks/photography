@@ -7,80 +7,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Illia Shust - Photography</title>
   <meta name="description" content="Photography portfolio" />
+  <meta name="robots" content="noindex, nofollow" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
   <link rel="manifest" href="assets/img/favicon/site.webmanifest">
   <link rel="stylesheet" href="assets/output.css" />
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
 
   <script defer src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-  <script defer src="https://code.jquery.com/jquery-3.6.3.min.js"
-    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 
   <script src="assets/theme.js"></script>
 </head>
 
 <body
-  class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
-  <header class="flex w-full overflow-hidden pt-10 pb-1">
-    <nav id="nav" x-data="{ open: false }" role="navigation" class="w-full">
-      <div class="container mx-auto flex flex-wrap items-center md:flex-no-wrap">
+  class="bg-white dark:bg-black opacity-0 px-5 md:px-20 h-screen text-black dark:text-white transition animate-fade-in duration-500">
+  <header class="flex pt-10 pb-1 w-full overflow-hidden">
+    <nav id="nav" role="navigation" class="w-full">
+      <div class="flex flex-wrap md:flex-no-wrap items-center mx-auto container">
         <div class="mr-4 md:mr-8">
-          <a href="index.html" class="text-4xl font-bold">Illia Shust</a>
+          <a href="index.html" class="font-bold text-4xl">Illia Shust</a>
         </div>
-        <div class="ml-auto md:hidden flex items-center justify-start">
-          <button onclick="menuToggle()" @click="open = !open"
-            class="tap-highlight-transparent text-black dark:text-white w-5 h-5 relative focus:outline-none"
-            @click="open = !open">
+        <div class="md:hidden flex justify-start items-center ml-auto">
+          <button onclick="menuToggle()"
+            class="relative focus:outline-none w-5 h-5 text-black dark:text-white tap-highlight-transparent">
             <span class="sr-only">Open main menu</span>
-            <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <div class="block top-1/2 left-1/2 absolute w-5 -translate-x-1/2 -translate-y-1/2 transform">
               <span aria-hidden="true"
-                class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
-                :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+                class="block absolute bg-current w-5 h-0.5 transition -translate-y-1.5 duration-500 ease-in-out transform"
+                id="menu-line-1"></span>
               <span aria-hidden="true"
-                class="block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out"
-                :class="{'opacity-0': open } "></span>
+                class="block absolute bg-current w-5 h-0.5 transition duration-500 ease-in-out transform"
+                id="menu-line-2"></span>
               <span aria-hidden="true"
-                class="block absolute h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out"
-                :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+                class="block absolute bg-current w-5 h-0.5 transition translate-y-1.5 duration-500 ease-in-out transform"
+                id="menu-line-3"></span>
             </div>
           </button>
         </div>
         <div id="menu"
-          class="w-full h-0 transition-all ease-out duration-500 md:transition-none md:w-auto md:flex-grow md:flex md:items-center">
+          class="md:flex md:flex-grow md:items-center w-full md:w-auto h-0 transition-all md:transition-none duration-500 ease-out">
           <ul id="ulMenu"
-            class="flex flex-col duration-500 ease-out md:space-x-5 sm:transition-none md:flex-row md:items-center md:ml-auto md:mt-0 md:pt-0 md:border-0 max-md:space-y-4 max-md:mt-10 ">
-            <li class="group max-md:transition-none transition duration-500">
+            class="flex md:flex-row flex-col md:items-center md:space-x-5 max-md:space-y-4 max-md:mt-10 md:mt-0 md:ml-auto md:pt-0 md:border-0 sm:transition-none duration-500 ease-out">
+            <li class="group transition max-md:transition-none duration-500">
               <a href="index.html" class="font-signika text-2xl tap-highlight-transparent">PORTFOLIO
-                <span class="hidden md:block h-0.5 bg-black dark:bg-white"></span>
+                <span class="hidden md:block bg-black dark:bg-white h-0.5"></span>
               </a>
             </li>
-            <li class="group max-md:transition-none transition duration-500">
+            <li class="group transition max-md:transition-none duration-500">
               <a href="about.html" class="font-signika text-2xl tap-highlight-transparent">ABOUT ME
                 <span
-                  class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                  class="hidden md:block bg-black dark:bg-white max-w-0 group-hover:max-w-full h-0.5 transition-all duration-500"></span>
               </a>
             </li>
-            <li class="group max-md:transition-none transition duration-500">
+            <li class="group transition max-md:transition-none duration-500">
               <a href="contact.html" class="font-signika text-2xl tap-highlight-transparent">CONTACT
                 <span
-                  class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+                  class="hidden md:block bg-black dark:bg-white max-w-0 group-hover:max-w-full h-0.5 transition-all duration-500"></span>
               </a>
             </li>
-            <li class="group max-md:transition-none transition duration-500">
+            <li class="group transition max-md:transition-none duration-500">
               <button id="theme-toggle-btn" onclick="switchTheme()" aria-label="Toggle dark mode"
-                class="w-8 h-8 flex items-center justify-left focus:outline-none cursor-pointer">
-                <svg x-show="!document.documentElement.classList.contains('dark')" xmlns="http://www.w3.org/2000/svg"
-                  class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" />
-                </svg>
-                <svg x-show="document.documentElement.classList.contains('dark')" xmlns="http://www.w3.org/2000/svg"
+                class="flex justify-left items-center focus:outline-none w-8 h-8 cursor-pointer">
+                <svg id="light" xmlns="http://www.w3.org/2000/svg"
                   class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" />
                 </svg>
@@ -92,272 +84,272 @@
     </nav>
   </header>
   <main>
-    <div class="container mx-auto">
-      <h1 class="text-2xl pt-10 pb-8 font-bold">PORTFOLIO</h1>
+    <div class="mx-auto container">
+      <h1 class="pt-10 pb-8 font-bold text-2xl">PORTFOLIO</h1>
       <section class="text-neutral-700">
-        <div class="container w-full">
+        <div class="w-full container">
           <div class="flex flex-wrap w-full">
-            <div class="flex w-full md:w-1/2 flex-wrap">
-              <div class="w-full md:w-1/2 p-1">
-                <div class="overflow-hidden h-full w-full">
+            <div class="flex flex-wrap w-full md:w-1/2">
+              <div class="p-1 w-full md:w-1/2">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/1.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 1"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/1.webp" />
                   </a>
                 </div>
               </div>
-              <div class="w-full md:w-1/2 p-1">
-                <div class="overflow-hidden h-full w-full">
+              <div class="p-1 w-full md:w-1/2">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/2.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 2"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/2.webp" />
                   </a>
                 </div>
               </div>
-              <div class="w-full p-1">
-                <div class="overflow-hidden h-full w-full">
+              <div class="p-1 w-full">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/3.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 3"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/3.webp" />
                   </a>
                 </div>
               </div>
             </div>
 
-            <div class="flex w-full md:w-1/2 flex-wrap">
-              <div class="w-full p-1">
-                <div class="overflow-hidden h-full w-full">
+            <div class="flex flex-wrap w-full md:w-1/2">
+              <div class="p-1 w-full">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/4.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 4"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/4.webp" />
                   </a>
                 </div>
               </div>
-              <div class="w-full md:w-1/2 p-1">
-                <div class="overflow-hidden h-full w-full">
+              <div class="p-1 w-full md:w-1/2">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/5.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 5"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/5.webp" />
                   </a>
                 </div>
               </div>
-              <div class="w-full md:w-1/2 p-1">
-                <div class="overflow-hidden h-full w-full">
+              <div class="p-1 w-full md:w-1/2">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/6.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 6"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/6.webp" />
                   </a>
                 </div>
               </div>
-              <div class="w-full md:w-1/2 p-1">
-                <div class="overflow-hidden h-full w-full">
+              <div class="p-1 w-full md:w-1/2">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/7.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 7"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/7.webp" />
                   </a>
                 </div>
               </div>
-              <div class="w-full md:w-1/2 p-1">
-                <div class="overflow-hidden h-full w-full">
+              <div class="p-1 w-full md:w-1/2">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/8.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 8"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/8.webp" />
                   </a>
                 </div>
               </div>
             </div>
-            <div class="flex w-full md:w-1/2 flex-wrap">
-              <div class="w-full p-1">
-                <div class="overflow-hidden h-full w-full">
+            <div class="flex flex-wrap w-full md:w-1/2">
+              <div class="p-1 w-full">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/9.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 9"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/9.webp" />
                   </a>
                 </div>
               </div>
-              <div class="w-full md:w-1/2 p-1">
-                <div class="overflow-hidden h-full w-full">
+              <div class="p-1 w-full md:w-1/2">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/10.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 10"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/10.webp" />
                   </a>
                 </div>
               </div>
-              <div class="w-full md:w-1/2 p-1">
-                <div class="overflow-hidden h-full w-full">
+              <div class="p-1 w-full md:w-1/2">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/11.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 11"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/11.webp" />
                   </a>
                 </div>
               </div>
-              <div class="w-full md:w-1/2 p-1">
-                <div class="overflow-hidden h-full w-full">
+              <div class="p-1 w-full md:w-1/2">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/12.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 12"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/12.webp" />
                   </a>
                 </div>
               </div>
-              <div class="w-full md:w-1/2 p-1">
-                <div class="overflow-hidden h-full w-full">
+              <div class="p-1 w-full md:w-1/2">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/13.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 13"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/13.webp" />
                   </a>
                 </div>
               </div>
             </div>
 
-            <div class="flex w-full md:w-1/2 flex-wrap">
-              <div class="w-full p-1">
-                <div class="overflow-hidden h-full w-full">
+            <div class="flex flex-wrap w-full md:w-1/2">
+              <div class="p-1 w-full">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/14.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 14"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/14.webp" />
                   </a>
                 </div>
               </div>
-              <div class="w-full p-1">
-                <div class="overflow-hidden h-full w-full">
+              <div class="p-1 w-full">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/15.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 15"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/15.webp" />
                   </a>
                 </div>
               </div>
-              <div class="w-full md:w-1/2 p-1">
-                <div class="overflow-hidden h-full w-full">
+              <div class="p-1 w-full md:w-1/2">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/16.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 16"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/16.webp" />
                   </a>
                 </div>
               </div>
-              <div class="w-full md:w-1/2 p-1">
-                <div class="overflow-hidden h-full w-full">
+              <div class="p-1 w-full md:w-1/2">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/17.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 17"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/17.webp" />
                   </a>
                 </div>
               </div>
             </div>
 
-            <div class="flex w-full md:w-1/2 flex-wrap">
+            <div class="flex flex-wrap w-full md:w-1/2">
 
-              <div class="w-full md:w-1/2 p-1">
-                <div class="overflow-hidden h-full w-full">
+              <div class="p-1 w-full md:w-1/2">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/18.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 18"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/18.webp" />
                   </a>
                 </div>
               </div>
-              <div class="w-full md:w-1/2 p-1">
-                <div class="overflow-hidden h-full w-full">
+              <div class="p-1 w-full md:w-1/2">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/19.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 19"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/19.webp" />
                   </a>
                 </div>
               </div>
             </div>
 
-            <div class="flex w-full md:w-1/2 flex-wrap">
-              <div class="w-full p-1">
-                <div class="overflow-hidden h-full w-full">
+            <div class="flex flex-wrap w-full md:w-1/2">
+              <div class="p-1 w-full">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/20.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 20"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/20.webp" />
                   </a>
                 </div>
               </div>
             </div>
 
-            <div class="flex w-full flex-wrap">
-              <div class="w-full md:w-1/3 p-1">
-                <div class="overflow-hidden h-full w-full">
+            <div class="flex flex-wrap w-full">
+              <div class="p-1 w-full md:w-1/3">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/21.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 21"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/21.webp" />
                   </a>
                 </div>
               </div>
-              <div class="w-full md:w-1/3 p-1">
-                <div class="overflow-hidden h-full w-full">
+              <div class="p-1 w-full md:w-1/3">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/22.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 22"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/22.webp" />
                   </a>
                 </div>
               </div>
-              <div class="w-full md:w-1/3 p-1">
-                <div class="overflow-hidden h-full w-full">
+              <div class="p-1 w-full md:w-1/3">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/23.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 23"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/23.webp" />
                   </a>
                 </div>
               </div>
             </div>
 
-            <div class="flex w-full flex-wrap">
-              <div class="w-full md:w-1/4 p-1">
-                <div class="overflow-hidden h-full w-full">
+            <div class="flex flex-wrap w-full">
+              <div class="p-1 w-full md:w-1/4">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/24.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 24"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/24.webp" />
                   </a>
                 </div>
               </div>
-              <div class="w-full md:w-1/4 p-1">
-                <div class="overflow-hidden h-full w-full">
+              <div class="p-1 w-full md:w-1/4">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/25.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 25"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/25.webp" />
                   </a>
                 </div>
               </div>
-              <div class="w-full md:w-1/4 p-1">
-                <div class="overflow-hidden h-full w-full">
+              <div class="p-1 w-full md:w-1/4">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/26.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 26"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/26.webp" />
                   </a>
                 </div>
               </div>
-              <div class="w-full md:w-1/4 p-1">
-                <div class="overflow-hidden h-full w-full">
+              <div class="p-1 w-full md:w-1/4">
+                <div class="w-full h-full overflow-hidden">
                   <a href="assets/img/pictures/27.webp" data-fancybox="gallery">
                     <img loading="lazy" alt="image 27"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                      class="block opacity-0 w-full h-full object-center object-cover scale-100 hover:scale-110 transition animate-fade-in duration-500 transform"
                       src="assets/img/pictures/27.webp" />
                   </a>
                 </div>
@@ -368,14 +360,14 @@
     </div>
   </main>
   <footer>
-    <div class="max-w-screen-xl py-16 mx-auto">
-      <div class="grid grid-cols-1 gap-8 text-center mx-auto">
+    <div class="mx-auto py-16 max-w-screen-xl">
+      <div class="gap-8 grid grid-cols-1 mx-auto text-center">
         <div>
 
           <div class="flex mx-auto">
-            <div class="mx-auto space-x-6 flex mt-8 text-gray-600 dark:text-gray-300">
+            <div class="flex space-x-6 mx-auto mt-8 text-gray-600 dark:text-gray-300">
 
-              <a class="transition duration-500 hover:opacity-75" href="https://www.instagram.com/easyusernamess"
+              <a class="hover:opacity-75 transition duration-500" href="https://www.instagram.com/easyusernamess"
                 target="_blank" rel="noreferrer">
                 <span class="sr-only"> Instagram </span>
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
@@ -383,7 +375,7 @@
                     d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
                 </svg>
               </a>
-              <a class="transition duration-500 hover:opacity-75" href="https://github.com/awerks" target="_blank"
+              <a class="hover:opacity-75 transition duration-500" href="https://github.com/awerks" target="_blank"
                 rel="noreferrer">
                 <span class="sr-only"> Github </span>
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -396,7 +388,7 @@
           </div>
         </div>
       </div>
-      <p class="mt-8 text-xs text-gray-600 dark:text-gray-300 text-center">
+      <p class="mt-8 text-gray-600 dark:text-gray-300 text-xs text-center">
         © 2025 Developed by
         <a href="https://github.com/awerks" class="underline" target="_blank">Illia Shust</a>
       </p>
